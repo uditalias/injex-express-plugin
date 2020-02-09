@@ -1,24 +1,11 @@
-import { Injex, plugins, LogLevel } from "injex";
-import * as path from "path";
-import { InjexExpressPlugin } from "./InjexExpressPlugin";
-import { Application } from "express";
+// decorators
+export { controller } from "./decorators/controller";
+export { get } from "./decorators/get";
+export { post } from "./decorators/post";
+export { del } from "./decorators/del";
+export { put } from "./decorators/put";
+export { patch } from "./decorators/patch";
 
-(async function () {
-	const container = Injex.create({
-		rootDirs: [
-			path.resolve(__dirname, "./app")
-		],
-		logLevel: LogLevel.Debug,
-		plugins: [
-			new plugins.HooksLoggerPlugin(),
-			new InjexExpressPlugin({
-				createAppCallback: function (app: Application) {
-					app.listen(8081, () => console.log("Server is running..."));
-				}
-			})
-		]
-	});
+export * from "./interfaces";
 
-	await container.bootstrap();
-
-})();
+export { InjexExpressPlugin } from "./InjexExpressPlugin";

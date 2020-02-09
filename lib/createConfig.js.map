@@ -1,1 +1,1 @@
-{"version":3,"file":"createConfig.js","sourceRoot":"","sources":["../src/createConfig.ts"],"names":[],"mappings":";;AAGA,SAAwB,YAAY,CAAC,MAA0C;IAC9E,OAAO;QACN,GAAG,EAAE,IAAI;QACT,iBAAiB,EAAE,CAAC,GAAgB,EAAE,EAAE,GAAG,CAAC;QAC5C,GAAG,MAAM;KACT,CAAC;AACH,CAAC;AAND,+BAMC"}
+{"version":3,"file":"createConfig.js","sourceRoot":"","sources":["../src/createConfig.ts"],"names":[],"mappings":";;AAGA,SAAgB,IAAI,CAAC,GAAG,IAAI,IAAI,CAAC;AAAjC,oBAAiC;AAEjC,SAAwB,YAAY,CAAC,MAA2C;IAC/E,OAAO;QACN,GAAG,EAAE,IAAI;QACT,iBAAiB,EAAE,IAAI;QACvB,GAAG,MAAM;KACT,CAAC;AACH,CAAC;AAND,+BAMC"}

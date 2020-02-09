@@ -80,7 +80,7 @@ export class ProductsController {
 }
 ```
 
-**Check out the [examples](examples/) folder for a more detailed usage.**
+**Check out the [example](example/) folder for a more detailed usage.**
 
 
 ## Configurations
@@ -151,7 +151,7 @@ export class HomeController {
 }
 ```
 
-Is the same as:
+Is the same as the traditional express way:
 
 ```typescript
 app.get("/", function(req, res) {
@@ -168,7 +168,7 @@ app.post("/product/create", function(req, res) {
 ```
 
 The difference is that with Injex, you can inject dependencies into your controller.  
-Another thing is the use of the `@singleton()` decorator, as you can see from the example above, the HomeController is defined without it, it means that you will get a "fresh" HomeController instance for each request, you can call it a session controller. When using the `@singleton()` decorator on a controller class, you get the same controller instance for each client request.
+Another difference is the use of the `@singleton()` decorator, as you can see from the example above, the HomeController is defined without it, it means that you will get a "fresh" HomeController instance for each request, you can call it a session controller. When using the `@singleton()` decorator on a controller class, you get the same controller instance for each client request.
 
 For example:
 
@@ -186,7 +186,7 @@ export class HomeController {
 
 	@get("/")
 	public render(req, res) {
-		res.send(`<h1>This page rendered ${++this.visitors} times!</h1>`);
+		res.send(`<h1>This page visited ${++this.visitors} times!</h1>`);
 	}
 }
 ```
@@ -211,7 +211,7 @@ export class HomeController {
 }
 ```
 
-**Check out the [examples](examples/) folder for a more detailed usage.**
+**Check out the [example](example/) folder for a more detailed usage.**
 
 ---
 

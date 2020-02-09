@@ -1,8 +1,8 @@
 import * as express from "express";
-import { controller } from "../../decorators/controller";
-import { get } from "../../decorators/get";
-import { define, singleton, inject, init } from "injex";
-import { post } from "../../decorators/post";
+import { define, inject, init } from "injex";
+import { controller } from "../../../src/decorators/controller";
+import { get } from "../../../src/decorators/get";
+import { post } from "../../../src/decorators/post";
 import { CategoryManager } from "../managers/categoryManager";
 
 @define()
@@ -10,10 +10,6 @@ import { CategoryManager } from "../managers/categoryManager";
 export class HomeController {
 
 	@inject() private categoryManager: CategoryManager;
-
-	constructor() {
-		console.log("HomeController created");
-	}
 
 	@init()
 	public initialize() {
@@ -31,7 +27,9 @@ export class HomeController {
 	}
 
 	@post("/cat/:category")
-	public createProduct(req: express.Request<{ category: string; }>, res: express.Response) {
+	public async createProduct(req: express.Request<{ category: string; }>, res: express.Response) {
+		const category = await this.categoryManager.create(req.body);
 
+		res.send("<h1>Category created!</h1>");
 	}
 }
