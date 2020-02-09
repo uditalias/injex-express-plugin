@@ -11,7 +11,7 @@ _Turn your Express application into a dependency-injection ballet using Injex_
 [![codecov](https://codecov.io/gh/uditalias/injex-express-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/uditalias/injex-express-plugin)
 
 ## Why should you use this Injex plugin?
-When working with Express applications, one of the hassles is to config all your application routes and routes handlers. This plugin helps organize your application by using controllers and decorators, each controller has it's own route handlers for a specific application domain.
+When working with Express applications, one of the hassles is to config all your application routes and route handlers. This plugin helps organize your application by using controllers and decorators, each controller has it's own route handlers for a specific application domain.
 
 ## Install
 
