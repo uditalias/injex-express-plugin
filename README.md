@@ -77,7 +77,6 @@ export class ProductsController {
 
 		res.redirect(`/products/${newProduct.id}`);
 	}
-
 }
 ```
 
