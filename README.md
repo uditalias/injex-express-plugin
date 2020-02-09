@@ -118,6 +118,101 @@ Default: `null`
 	});
 	```
 
+## Decorators
+
+### `@controller()`
+- Define a module as a controller.  
+User this decorator on your controller class for example:
+
+### `@get([path])`, `@post([path])`, `@post([path])`, `@patch([path])`, `@put([path])`, `@del([path])`
+- Binds a controller method into Express application route.
+
+Controller example:
+
+```typescript
+@define()
+@controller()
+export class HomeController {
+
+	@get("/")
+	public renderRoot(req, res) {
+
+	}
+
+	@get("/product/:id")
+	public renderProduct(req, res) {
+
+	}
+
+	@post("/product/create")
+	public createProduct(req, res) {
+
+	}
+}
+```
+
+Is the same as:
+
+```typescript
+app.get("/", function(req, res) {
+
+});
+
+app.get("/product/:id", function(req, res) {
+	
+});
+
+app.post("/product/create", function(req, res) {
+	
+});
+```
+
+The difference is that with Injex, you can inject dependencies into your controller.  
+Another thing is the use of the `@singleton()` decorator, as you can see from the example above, the HomeController is defined without it, it means that you will get a "fresh" HomeController instance for each request, you can call it a session controller. When using the `@singleton()` decorator on a controller class, you get the same controller instance for each client request.
+
+For example:
+
+```typescript
+@define()
+@singleton()
+@controller()
+export class HomeController {
+
+	private visitors: number;
+
+	constructor() {
+		this.visitors = 0;
+	}
+
+	@get("/")
+	public render(req, res) {
+		res.send(`<h1>This page rendered ${++this.visitors} times!</h1>`);
+	}
+}
+```
+
+And without the `@singleton()` decorator:
+
+```typescript
+@define()
+@controller()
+export class HomeController {
+
+	private visitors: number;
+
+	constructor() {
+		this.visitors = 0;
+	}
+
+	@get("/")
+	public render(req, res) {
+		res.send(`<h1>${++this.visitors} === 1</h1>`);
+	}
+}
+```
+
+**Check out the [examples](examples/) folder for a more detailed usage.**
+
 ---
 
 [![npm version](https://badge.fury.io/js/injex-express-plugin.svg)](https://badge.fury.io/js/injex-express-plugin)
