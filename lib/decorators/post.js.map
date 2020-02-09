@@ -1,0 +1,1 @@
+{"version":3,"file":"post.js","sourceRoot":"","sources":["../../src/decorators/post.ts"],"names":[],"mappings":";;AAAA,gDAAwD;AAExD,SAAgB,IAAI,CAAC,IAAY;IAChC,OAAO,UAAU,eAAe,EAAE,UAAkB,EAAE,kBAAsC;QAC3F,8BAAmB,CAClB,eAAe,CAAC,WAAW,EAC3B,IAAI,EACJ,MAAM,EACN,UAAU,CACV,CAAC;IACH,CAAC,CAAA;AACF,CAAC;AATD,oBASC"}

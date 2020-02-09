@@ -1,0 +1,67 @@
+{
+  "name": "injex-express-plugin",
+  "version": "1.0.0",
+  "description": "Injex plugin for Node JS Express applications",
+  "main": "./lib/index.js",
+  "types": "./typings/index.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:watch": "npm run tsc -- --watch",
+    "lint": "tslint -p tsconfig.json",
+    "lint:fix": "npm run lint -- --fix",
+    "clean": "rimraf lib/ typings/",
+    "release": "npm run build && release-it --no-git.requireCleanWorkingDir",
+    "build": "npm run lint && npm run clean && npm run tsc && npm run test:cov",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:watch": "npm t -- --watch --color --env=jsdom"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "files": [
+    "lib",
+    "typings"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uditalias/injex-express-plugin.git"
+  },
+  "keywords": [
+    "injex",
+    "express",
+    "plugin",
+    "http",
+    "server",
+    "di"
+  ],
+  "author": {
+    "name": "Udi Talias",
+    "email": "udi.talias@gmail.com",
+    "url": "https://github.com/uditalias"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uditalias/injex-express-plugin/issues"
+  },
+  "homepage": "https://github.com/uditalias/injex-express-plugin#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "tslib": "1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.2",
+    "@types/jest": "25.1.1",
+    "@types/node": "13.7.0",
+    "husky": "4.2.1",
+    "injex": "1.0.13",
+    "jest": "25.1.0",
+    "release-it": "12.4.3",
+    "rimraf": "3.0.1",
+    "ts-jest": "25.2.0",
+    "tslint": "6.0.0",
+    "typescript": "3.7.5"
+  }
+}
