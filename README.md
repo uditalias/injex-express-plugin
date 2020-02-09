@@ -1,6 +1,6 @@
 <img src="https://github.com/uditalias/injex/raw/master/assets/logo.png" width="228" /> <a href="https://github.com/langauge/langauge"><img src="https://badge.langauge.io/uditalias/injex-express-plugin" align="right" /></a>
 
-# injext-express-plugin
+# injex-express-plugin
 
 _Turn your Express application into a dependency-injection ballet using Injex_
 
