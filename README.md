@@ -122,7 +122,7 @@ Default: `null`
 
 ### `@controller()`
 - Define a module as a controller.  
-User this decorator on your controller class for example:
+Use this decorator on your controller class for example:
 
 ### `@get([path])`, `@post([path])`, `@post([path])`, `@patch([path])`, `@put([path])`, `@del([path])`
 - Binds a controller method into Express application route.
