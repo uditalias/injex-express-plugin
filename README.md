@@ -80,6 +80,8 @@ export class ProductsController {
 }
 ```
 
+The controller will be created when one of its handled routes is requested.
+
 **Check out the [example](example/) folder for a more detailed usage.**
 
 
