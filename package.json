@@ -49,7 +49,7 @@
   },
   "homepage": "https://github.com/uditalias/injex-express-plugin#readme",
   "dependencies": {
-    "express": "4.17.1",
+    "express": "4.17.3",
     "tslib": "1.10.0"
   },
   "devDependencies": {
